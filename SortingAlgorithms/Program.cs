@@ -7,7 +7,7 @@ namespace SortingAlgorithms
         static void Main(string[] args)
         {
             Console.WriteLine("Enter comma separated integers");
-            Console.WriteLine("eg.  5,9,12,2,3,6,7,10,11,1,8");
+            Console.WriteLine("eg.  5,9,12,2,3,6,7788,7,10,11,1,8");
             Console.WriteLine("");
 
             // get data
