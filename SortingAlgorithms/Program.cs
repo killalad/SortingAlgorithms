@@ -6,23 +6,14 @@ namespace SortingAlgorithms
     {
         static void Main(string[] args)
         {
-            HeapSortView.intro();
+            ConsoleView.intro();
+            int[] rawArray = ConsoleView.getData();
 
-            // get data
-            String inputData = Console.ReadLine();
-
-            // parse data
-            String[] rawStringArray = inputData.Replace(" ", "").Split(',');
-            int[] rawArray = Array.ConvertAll(rawStringArray, s => int.Parse(s));
-
-            // sort data
             HeapSort heapSort = new HeapSort(rawArray);
             int[] sortedArray = heapSort.sort();
 
-            // print data
-            HeapSortView.printArrayData(sortedArray);
-
-            Console.ReadKey();
+            ConsoleView.printArrayData(sortedArray);
+            ConsoleView.end();
         }
     }
 }
