@@ -6,16 +6,17 @@ namespace SortingAlgorithms
 {
     class HeapSort
     {
+        public static String Name = "HeapSort";
         private int[] array;
         public HeapSort(int[] rawArray) { array = rawArray; }
 
         // sort the array
-        public int[] sort()
+        public int[] Sort()
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
                 HeapMax(i);
-                swap(0, (array.Length - 1 - i));
+                Swap(0, (array.Length - 1 - i));
             }
             return array;
         }
@@ -31,7 +32,7 @@ namespace SortingAlgorithms
         }
 
         // swap values
-        private void swap(int first, int second)
+        private void Swap(int first, int second)
         {
             int temp = array[first];
             array[first] = array[second];
@@ -46,11 +47,11 @@ namespace SortingAlgorithms
 
             if (firstChildPosition < array.Length && array[parentPosition] < array[firstChildPosition])
             {
-                swap(parentPosition, firstChildPosition);
+                Swap(parentPosition, firstChildPosition);
             }
             if (secondChildPosition < array.Length && array[parentPosition] < array[secondChildPosition])
             {
-                swap(parentPosition, secondChildPosition);
+                Swap(parentPosition, secondChildPosition);
             }
         }
     }

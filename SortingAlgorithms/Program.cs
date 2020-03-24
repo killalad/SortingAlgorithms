@@ -6,14 +6,15 @@ namespace SortingAlgorithms
     {
         static void Main(string[] args)
         {
-            ConsoleView.intro();
-            int[] rawArray = ConsoleView.getData();
+            ConsoleView.Intro(HeapSort.Name);
+
+            int[] rawArray = ConsoleView.GetIntArray();
 
             HeapSort heapSort = new HeapSort(rawArray);
-            int[] sortedArray = heapSort.sort();
 
-            ConsoleView.printArrayData(sortedArray);
-            ConsoleView.end();
+            ConsoleView.PrintIntArray(heapSort.Sort());
+
+            ConsoleView.End();
         }
     }
 }
